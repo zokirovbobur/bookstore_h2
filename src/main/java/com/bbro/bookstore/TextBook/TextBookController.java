@@ -13,6 +13,12 @@ public class TextBookController {
     @Autowired
     private TextBookService textBookService;
 
+    
+    @RequestMapping("/sample/textbook")
+    public TextBook getSampleTextBook(){
+        return new TextBook();
+    }
+    
     @RequestMapping("/textbooks")
     public List<TextBook> getAllTextBooks(){
         return textBookService.getAllTextBooks();
